@@ -182,7 +182,7 @@ public class Welcome extends Activity {
         // already been started
         // When the service starts, it reconciles EAS accounts.
         // TODO More completely separate ExchangeService from Email app
-        EmailServiceUtils.startExchangeService(this);
+//        EmailServiceUtils.startExchangeService(this);
 
         // Extract parameters from the intent.
         final Intent intent = getIntent();
