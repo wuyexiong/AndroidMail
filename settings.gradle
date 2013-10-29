@@ -1,0 +1,4 @@
+include ':chips'
+include ':AndroidMail-libs'
+include ':AndroidMail'
+//include ':AndroidMail-test'
