@@ -69,9 +69,7 @@ import com.android.emailcommon.provider.Mailbox;
 import com.android.emailcommon.utility.EmailAsyncTask;
 import com.android.emailcommon.utility.Utility;
 import com.google.common.annotations.VisibleForTesting;
-import com.google.gson.Gson;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -92,7 +90,6 @@ public class MessageListFragment extends ListFragment
 
     /** Argument name(s) */
     private static final String ARG_LIST_CONTEXT = "listContext";
-    private static final String TAG = "MessageListFragment";
 
     // Controller access
     private Controller mController;
@@ -1307,26 +1304,7 @@ public class MessageListFragment extends ListFragment
                 Log.d(Logging.LOG_TAG, MessageListFragment.this
                         + " onLoadFinished(messages) mailboxId=" + getMailboxId());
             }
-
-
             MessagesAdapter.MessagesCursor cursor = (MessagesAdapter.MessagesCursor) c;
-
-
-            if(cursor != null && cursor.getCount() > 0)
-            {
-                ArrayList<Message> messages = new ArrayList<Message>(cursor.getCount());
-                for(cursor.moveToFirst(); !cursor.isAfterLast();cursor.moveToNext())
-                {
-                    Message msg = new Message();
-                    msg.restore(cursor);
-                    messages.add(msg);
-//                    Log.e(TAG, msg.toString());
-                }
-                Gson gson = new Gson();
-                String json = gson.toJson(messages);
-                Log.v(TAG, json);
-            }
-            cursor.moveToFirst();
 
             // Update the list
             mListAdapter.swapCursor(cursor);

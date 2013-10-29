@@ -872,44 +872,6 @@ public abstract class EmailContent {
             mThreadTopic = cursor.getString(CONTENT_THREAD_TOPIC_COLUMN);
         }
 
-        @Override
-        public String toString() {
-            return "Message{" +
-                    "mDisplayName='" + mDisplayName + '\'' +
-                    ", mTimeStamp=" + mTimeStamp +
-                    ", mSubject='" + mSubject + '\'' +
-                    ", mFlagRead=" + mFlagRead +
-                    ", mFlagLoaded=" + mFlagLoaded +
-                    ", mFlagFavorite=" + mFlagFavorite +
-                    ", mFlagAttachment=" + mFlagAttachment +
-                    ", mFlags=" + mFlags +
-                    ", mServerId='" + mServerId + '\'' +
-                    ", mServerTimeStamp=" + mServerTimeStamp +
-                    ", mClientId='" + mClientId + '\'' +
-                    ", mMessageId='" + mMessageId + '\'' +
-                    ", mMailboxKey=" + mMailboxKey +
-                    ", mAccountKey=" + mAccountKey +
-                    ", mFrom='" + mFrom + '\'' +
-                    ", mTo='" + mTo + '\'' +
-                    ", mCc='" + mCc + '\'' +
-                    ", mBcc='" + mBcc + '\'' +
-                    ", mReplyTo='" + mReplyTo + '\'' +
-                    ", mMeetingInfo='" + mMeetingInfo + '\'' +
-                    ", mSnippet='" + mSnippet + '\'' +
-                    ", mProtocolSearchInfo='" + mProtocolSearchInfo + '\'' +
-                    ", mThreadTopic='" + mThreadTopic + '\'' +
-                    ", mServerConversationId='" + mServerConversationId + '\'' +
-                    ", mText='" + mText + '\'' +
-                    ", mHtml='" + mHtml + '\'' +
-                    ", mTextReply='" + mTextReply + '\'' +
-                    ", mHtmlReply='" + mHtmlReply + '\'' +
-                    ", mSourceKey=" + mSourceKey +
-                    ", mAttachments=" + mAttachments +
-                    ", mIntroText='" + mIntroText + '\'' +
-                    ", mQuotedTextStartPos=" + mQuotedTextStartPos +
-                    '}';
-        }
-
         public boolean update() {
             // TODO Auto-generated method stub
             return false;

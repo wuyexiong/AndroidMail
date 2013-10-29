@@ -295,8 +295,7 @@ import java.util.Set;
         public MessagesCursorLoader(Context context, MessageListContext listContext) {
             // Initialize with no where clause.  We'll set it later.
             super(context, EmailContent.Message.CONTENT_URI,
-//                    MESSAGE_PROJECTION, null, null,
-                    Message.CONTENT_PROJECTION, null, null,
+                    MESSAGE_PROJECTION, null, null,
                     EmailContent.MessageColumns.TIMESTAMP + " DESC");
             mContext = context;
             mAccountId = listContext.mAccountId;
